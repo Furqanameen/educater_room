@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brightersroom</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'brightersroom', media: 'all' %>
+    <%= stylesheet_link_tag 'student', media: 'all' %>
+    <%= favicon_link_tag 'favicon.ico' %>
+  </head>
+
+  <body class="layout-fluid layout-sticky-subnav">
+    <!-- App Settings FAB -->
+    <div id="app-settings">
+      <app-settings layout-active="fluid"></app-settings>
+    </div>
+
+    <div class="preloader"></div>
+
+    <!-- Header Layout -->
+    <div class="mdk-header-layout js-mdk-header-layout">
+      <%= render partial: 'shared/dashboard_partials/header' %>
+      <!-- Header Layout Content -->
+      <div class="mdk-header-layout__content page">
+        <%= render partial: 'shared/dashboard_partials/navigation' %>
+        <div class="container-fluid page__container">
+          <%= yield %>
+        </div>
+        <%= render partial: 'shared/dashboard_partials/footer' %>
+      </div>
+      <!-- // END header-layout__content -->
+    </div>
+    <!-- // END header-layout -->
+
+    <%= render partial: 'shared/dashboard_partials/mini-sidebar' %>
+
+    <%= javascript_include_tag 'brightersroom' %>
+    <%= javascript_include_tag 'student' %>
+  </body>
+</html>

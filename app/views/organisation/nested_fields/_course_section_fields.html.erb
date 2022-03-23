@@ -1,0 +1,30 @@
+<div class="nested-fields mb-4">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= f.label :course_id %>
+            <%= f.select :course_id, @courses.map { |course| [course.title.titleize, course.id] }, { include_blank: 'Please select course', selected: f.object.course_id }, class: 'form-control input-lg course-select select2', required: true %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <div id="course_section_user_portion">
+              <% f.object.course_section_users.build if f.object.course_section_users.blank? %>
+              <div class="course_section_users">
+                <%= f.simple_fields_for :course_section_users do |course_section_user| %>
+                  <%= render 'organisation/nested_fields/course_section_user_fields', f: course_section_user unless course_section_user.object.user&.student? %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-remove text-right">
+    <%= link_to_remove_association 'Remove', f, class: 'btn btn-danger btn-xs custom-size-btn' %>
+  </div>
+  <hr>
+</div>

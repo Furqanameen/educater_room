@@ -1,0 +1,3 @@
+$("#assign-course-modal").html("<%= escape_javascript render(partial: 'organisation/sections/partials/enroll_students_modal', locals: { section: @section, students: @students }) %>")
+$('#enroll-students-modal').modal();
+$('.select2').select2();

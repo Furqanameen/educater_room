@@ -1,0 +1,123 @@
+.content-area {
+	.side-links {
+		position: relative;
+		overflow: visible;
+		box-sizing: border-box;
+		min-height: 1px;
+
+		.theiaStickySidebar {
+			padding-top: 0px;
+			padding-bottom: 1px;
+			position: static;
+			transform: none;
+
+			.box_style_cat {
+				background: #fff;
+				border: 1px solid #ededed;
+				margin-bottom: 25px;
+				box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+
+				ul#cat_nav {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+
+					li {
+						border-bottom: 1px solid #ededed;
+
+						a {
+							position: relative;
+							color: #555;
+							display: block;
+							padding: 15px 10px;
+							text-decoration: none;
+
+							&.active {
+								color: #3f9fff;
+							}
+
+							.book {
+								font-size: 16px;
+								font-size: 1rem;
+								margin: 2px 10px 0 0;
+								float: left;
+							}
+
+							.arrow {
+								position: absolute;
+								top: 18px;
+								right: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.accordion_2 {
+		.card {
+			.card-header {
+				background-color: #fff;
+				border-bottom: 1px solid #ededed;
+				padding: 0;
+
+				h5 {
+					font-size: 1rem;
+
+					a {
+						padding: 20px;
+						text-decoration: none;
+						border: 0;
+						display: block;
+						color: #999;
+						position: relative;
+
+						&[aria-expanded="false"]:after {
+							font-family: "FontAwesome";
+							content: '\f067';
+							position: absolute;
+							top: 21px;
+							right: 20px;
+							color: $black;
+						}
+
+						&[aria-expanded="true"]:after {
+							font-family: "FontAwesome";
+							content: '\f068';
+							position: absolute;
+							top: 21px;
+							right: 20px;
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.faq-section {
+	.card:not(.clear-shadow) {
+		box-shadow: 0 5px 15px 0 rgba(50, 50, 93, 0.07), 0 5px 1px 0 rgba(0, 0, 0, 0);
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.content-area {
+		.side-links {
+			.theiaStickySidebar {
+				.box_style_cat {
+					ul#cat_nav {
+						li {
+							a {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

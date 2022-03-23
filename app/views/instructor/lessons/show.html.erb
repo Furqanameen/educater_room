@@ -1,0 +1,96 @@
+<div class="container-fluid page__heading-container">
+  <div class="page__heading d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+    <div>
+      <h1 class="m-lg-0"><%= @lesson.title %></h1>
+      <div class="d-inline-flex align-items-center">
+        <i class="material-icons icon-16pt mr-1 text-muted">access_time</i> 2 <small class="text-muted ml-1 mr-1">hours</small>: 26 <small class="text-muted ml-1">min</small>
+      </div>
+    </div>
+    <div>
+      <%=link_to 'Back', instructor_course_section_lessons_path(@course_section.id), class: "btn btn-success"  %>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid page__container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card load-media">
+          <%= image_tag("no_found.png", controls: true, class: 'img-responsive') %>
+      </div>
+      <div class="card">
+        <div class="card-header card-header-large bg-light d-flex align-items-center">
+          <div class="flex">
+            <h4 class="card-header__title">Course Section Description</h4>
+          </div>
+        </div>
+        <div class="card-body">
+
+          <p><%= @course_section.section.description %></p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-4">
+
+      <!-- VIDEOS -->
+      <div class="card">
+        <div class="card-header card-header-large bg-light d-flex align-items-center">
+          <div class="flex">
+            <h4 class="card-header__title">Videos</h4>
+          </div>
+        </div>
+
+        <ul class="list-group list-group-fit">
+          <% @lesson.videos.each_with_index do |video, index|%>
+            <li class="list-group-item">
+              <div class="media">
+                <div class="media-left">
+                  <div class="text-muted"><%= (index+1) %></div>
+                </div>
+                <div class="media-body">
+                  <%= link_to video.blob[:filename] ,load_media_instructor_course_section_lessons_path(url: url_for(video), type: 'video'), remote: true, method: :post %>
+                </div>
+                <div class="media-right">
+                  <small class="text-muted"><%= video.blob.metadata.fetch(:duration, nil) %></small>
+                </div>
+              </div>
+            </li>
+          <% end %>
+
+        </ul>
+      </div>
+      <!-- FILES -->
+      <div class="card">
+        <div class="card-header card-header-large bg-light d-flex align-items-center">
+          <div class="flex">
+            <h4 class="card-header__title">Documents</h4>
+          </div>
+        </div>
+
+        <ul class="list-group list-group-fit">
+          <% @lesson.files.each_with_index do |file, index|%>
+            <li class="list-group-item">
+              <div class="media">
+                <div class="media-left">
+                  <div class="text-muted"><%= (index+1) %></div>
+                </div>
+                <div class="media-body">
+                  <%= link_to file.blob[:filename] ,load_media_instructor_course_section_lessons_path(url: url_for(file), type: 'file'), remote: true, method: :post %>
+                </div>
+                <div class="media-right">
+                  <small class="text-muted"><%= file.blob.metadata.fetch(:duration, nil) %></small>
+                </div>
+              </div>
+            </li>
+          <% end %>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

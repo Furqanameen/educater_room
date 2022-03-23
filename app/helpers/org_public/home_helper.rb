@@ -1,0 +1,2 @@
+module OrgPublic::HomeHelper
+end

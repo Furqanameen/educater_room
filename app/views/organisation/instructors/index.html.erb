@@ -1,0 +1,32 @@
+<div class="container-fluid page__heading-container">
+  <div class="page__heading d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+    <h1 class="m-0">Instructors</h1>
+    <%= link_to 'New Instructor', new_organisation_instructor_path, class: 'btn btn-success ml-lg-3' %>
+  </div>
+</div>
+
+<div class="container page__container">
+  <div class="row no-gutters">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-header-large bg-light d-flex align-items-center">
+          <div class="flex">
+            <h4 class="card-header__title">Instructors</h4>
+          </div>
+          <% if @instructors.present? %>
+            <div class="d-flex mb-2">
+              <div class="form-inline ml-auto">
+                <div class="form-group">
+                  <%= select_tag 'option', options_for_select([['All', 'all'], ['Deleted', 'deleted']]),{ include_blank: 'Select Option', class: 'form-control instructor-search-filter ml-lg-2 select2', id: 'instructor-search-constraint' } %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="card-body" id="instructor-card">
+          <%= render 'organisation/instructors/partials/listing', instructors: @instructors %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

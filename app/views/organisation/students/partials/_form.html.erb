@@ -1,0 +1,19 @@
+<% action = params[:action] == 'edit'? 'update' : 'create' %>
+<% url =  @student.new_record? ? url_for(action: action, controller: organisation_students_path) : url_for(action: 'update', controller: organisation_students_path) %>
+
+<div class="container-fluid page__container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <%= simple_form_for @student, url: url,  html: { class: 'form-horizontal'} do |f| %>
+          <div class="card-form__body card-body">
+            <%= render 'organisation/students/partials/fields', f: f %>
+          </div>
+          <div class="card-body text-center">
+            <%= f.submit 'Save Changes', class: 'btn btn-success' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

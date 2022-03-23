@@ -1,0 +1,16 @@
+<div class="nested-fields">
+  <h2>Add an answer</h2>
+  <div class="form-group">
+    <%= f.label :statement %>
+    <%= f.text_field :statement, class: 'form-control', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :is_correct %><br>
+    <%= f.radio_button :is_correct, true, class: 'form-check-input' %> True<br />
+    <%= f.radio_button :is_correct, false, class: 'form-check-input'  %> False<br />
+  </div>
+  <div class="form-group text-right">
+    <%= link_to_remove_association 'Remove Aswer', f, class: 'btn bg-danger text-white btn-sm border-0' %>
+  </div>
+</div>

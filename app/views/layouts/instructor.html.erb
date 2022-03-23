@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brightersroom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'brightersroom', media: 'all' %>
+    <%= stylesheet_link_tag 'instructor', media: 'all' %>
+    <%= favicon_link_tag 'favicon.ico' %>
+  </head>
+
+  <body class="layout-fluid layout-sticky-subnav">
+    <div id="app-settings">
+      <app-settings layout-active="fluid"></app-settings>
+    </div>
+    <div class="preloader"></div>
+
+    <div class="mdk-header-layout js-mdk-header-layout">
+      <%= render partial: 'shared/dashboard_partials/header' %>
+      <div class="mdk-header-layout__content page">
+        <%= render partial: 'shared/dashboard_partials/navigation' %>
+        <div class="container-fluid page__container">
+          <div class="mx-4">
+            <% flash.each do |key, value| %>
+              <div class="flash-alert alert alert-<%= get_flash_key(key) %>">
+                <%= value %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% end %>
+          </div>
+          <%= yield %>
+        </div>
+       <%= render partial: 'shared/dashboard_partials/footer' %>
+     </div>
+    </div>
+
+    <%= render partial: 'shared/dashboard_partials/mini-sidebar' %>
+
+    <%= javascript_include_tag 'brightersroom' %>
+    <%= javascript_include_tag 'instructor' %>
+  </body>
+</html>

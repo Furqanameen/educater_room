@@ -1,0 +1,16 @@
+<div class="row justify-content-end">
+  <%= link_to 'Edit', edit_organisation_profile_path(current_user), class: 'btn btn-info pull-right'%>
+</div><br />
+<div class="bg-secondary text-white d-flex justify-content-center align-items-center p-4 mb-4" style="height:400px">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-lg-left">
+        <div class="mr-lg-4 mb-4 mb-lg-0">
+            <%= image_tag current_user.image_path, class: "rounded-circle", width: "200", alt: "Frontted" %>
+        </div>
+        <div>
+            <h1 class="mb-lg-4"><%= current_user.full_name %></h1>
+            <%= link_to 'https://www.frontted.com', nil, class: "mr-3 text-white text-underline" %>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+
+</div>

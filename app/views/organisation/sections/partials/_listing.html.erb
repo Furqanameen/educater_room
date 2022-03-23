@@ -1,0 +1,29 @@
+<table class="table mb-0 thead-border-top-0">
+  <thead>
+    <tr>
+      <th class="text-center">SR.</th>
+      <th class="text-center">TITLE</th>
+      <th class="text-center">BATCH</th>
+      <th class="text-center" colspan="3">ACTION</th>
+    </tr>
+  </thead>
+  <tbody class="list" id="staff">
+    <% sections&.each_with_index do |section, index| %>
+      <tr class="text-center">
+        <td><%= (index+1) %></td>
+        <td><%= section.title&.titleize %></td>
+        <td><%= section.batch&.title&.titleize.presence || 'N/A' %></td>
+        <td>
+          <% if section.deleted_at.blank? %>
+            <%= link_to 'show', organisation_section_path(section), class: 'btn btn-primary custom-size-btn' %>  |
+            <%= link_to 'edit', edit_organisation_section_path(section), class: 'btn btn-warning custom-size-btn' %> |
+            <%= link_to 'destory', organisation_section_path(section), method: :delete, class: 'btn btn-danger custom-size-btn' %>
+            <%= link_to 'Enroll Students', enroll_students_modal_organisation_sections_path(id: section), class: 'btn btn-warning enroll-modal ', remote: true %>
+          <% else %>
+            <%=link_to 'restore', restore_organisation_section_path(section), method: :delete, class: 'btn btn-warning custom-size-btn' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

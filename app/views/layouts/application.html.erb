@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brightersroom</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Remote Learning Tool for Organizations, Instructors and Students | Brighter's Room">
+    <meta name="keywords" content="brighter’s room, education, distance learning, remote learning, communication development, e-learning platform, classroom, online sessions, online classes, online learning system, group video calls, video lessons">
+    <meta name="description" content="Brighter’s Room provides a great e-learning platform. This online learning tool facilitates organizations, instructors, and students by providing remote training anywhere, anytime.">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'brightersroom', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= favicon_link_tag 'favicon.ico' %>
+  </head>
+
+  <body class="layout-fluid layout-sticky-subnav">
+    <!-- App Settings FAB -->
+    <div id="app-settings">
+      <app-settings layout-active="fluid"></app-settings>
+    </div>
+
+    <%= render partial: 'shared/loader' %>
+
+    <!-- Header Layout -->
+    <div class="mdk-header-layout js-mdk-header-layout">
+      <%= render partial: 'shared/public_partials/header' unless no_header_footer? %>
+      <!-- Header Layout Content -->
+      <div class="mdk-header-layout__content page">
+        <div id="content-wrapper" class="<%= "home-page-container" if params[:id] == "home" %>">
+          <%= yield %>
+        </div>
+        <%= render partial: 'shared/public_partials/footer' unless no_header_footer? %>
+      </div>
+      <!-- // END header-layout__content -->
+    </div>
+    <!-- // END header-layout -->
+
+    <%= render partial: 'shared/public_partials/mini-sidebar' unless no_header_footer? %>
+
+    <%= javascript_include_tag 'brightersroom' %>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

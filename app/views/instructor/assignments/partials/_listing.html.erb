@@ -1,0 +1,35 @@
+<% if assignments.present? %>
+  <table class="table mb-0 thead-border-top-0">
+    <thead>
+      <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="list" id="staff">
+      <% assignments.each.with_index(1) do |assignment, index| %>
+        <tr id="assignmnet-row-<%= assignment.id %>">
+        <td><%= assignment&.title %></td>
+        <td><%= assignment&.description %></td>
+        <td><%= humanize_time(assignment&.start_date) %></td>
+        <td><%= humanize_time(assignment&.end_date) %></td>
+        <td class="text-center">
+          <% if assignment.deleted_at.blank? %>
+            <%= link_to 'Show', instructor_course_section_assignment_path(course_section.id, assignment), class: 'btn btn-primary'%>
+            <%= link_to 'Edit', edit_instructor_course_section_assignment_path(course_section.id, assignment), class: 'btn btn-warning'%>
+            <%= link_to 'Delete', instructor_course_section_assignment_path(course_section, assignment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          <% else %>
+            <%=link_to 'restore', restore_instructor_course_section_assignment_path(course_section.id, assignment), method: :delete, class: 'btn btn-warning custom-size-btn' %>
+           <% end %>
+        </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h3 class="not-found">NOT FOUND</h3>
+<% end %>
+

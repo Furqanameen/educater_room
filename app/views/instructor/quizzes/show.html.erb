@@ -1,0 +1,7 @@
+<p>Title : <%= @quiz&.title.titleize %></p>
+<p>Description: <%= @quiz&.description %></p>
+<p>Strt Date: <%= humanize_time @quiz&.start_date %></p>
+<p>End Date: <%= humanize_time @quiz&.end_date %></p>
+<div class="col-sm-6">
+  <%= link_to 'View all Quizzes', instructor_course_section_quizzes_path(@course_section), class: 'btn btn-primary btn-flat pull-right' %>
+</div>

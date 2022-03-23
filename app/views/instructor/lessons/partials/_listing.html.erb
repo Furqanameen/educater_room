@@ -1,0 +1,33 @@
+<% if lessons.present? %>
+<table class="table mb-0 thead-border-top-0">
+  <thead>
+    <tr>
+      <th>TITLE</th>
+      <th>Section</th>
+      <th>Course</th>
+      <th class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="list" id="staff">
+    <% lessons.each.with_index(1) do |lesson, index| %>
+    <tr id="lesson-row-<%= lesson.id %>">
+      <td><%= lesson&.title %></td>
+      <td><%= lesson&.course_section&.section&.title&.humanize %></td>
+      <td><%= lesson&.course_section&.course&.title&.humanize %></td>
+      <td class="text-center">
+        <% if lesson.deleted_at.blank? %>
+          <%= link_to 'Show', instructor_course_section_lesson_path(course_section, lesson), class: 'btn btn-success'%>
+          <%= link_to 'Edit', edit_instructor_course_section_lesson_path(course_section, lesson), class: 'btn btn-info'%>
+          <%= link_to 'Delete', instructor_course_section_lesson_path(course_section, lesson), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <% else %>
+          <%=link_to 'Restore', restore_instructor_course_section_lesson_path(course_section.id, lesson), method: :delete, class: 'btn btn-warning custom-size-btn' %>
+         <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+<h3 class="not-found">NOT FOUND</h3>
+<% end %>
+

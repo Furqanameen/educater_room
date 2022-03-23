@@ -1,0 +1,48 @@
+<div class="container-fluid page__heading-container">
+	<div class="page__heading d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-lg-left">
+		<div class="heading text-left w-50">
+			<h1 class="m-lg-0">Show</h1>
+		</div>
+		<div class="btns text-right w-50">
+			<%= link_to 'Edit', edit_organisation_section_path(@section), class: 'btn btn-warning ml-lg-2 custom-size-btn' %>
+			<%= link_to 'Back', organisation_sections_path, class: 'btn btn-dark ml-lg-2 custom-size-btn' %>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid page__container show-page">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<div class="media align-items-center">
+						<div class="media-left">
+							<%= image_tag '256_luke-porter-261779-unsplash.jpg', alt: 'About Adrian', width: '40', class: 'rounded-circle' %>
+						</div>
+						<div class="media-body">
+							<div class="card-title mb-0">
+								<%= link_to 'student-profile.html', class: 'text-body' do %>
+									<strong><%= @section.title&.titleize %></strong>
+								<% end %>
+							</div>
+							<p class="text-muted mb-0"><span>Batch: </span><%= @section.batch.title&.titleize %></p>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<%= @section.batch.description %>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header card-header-large bg-light d-flex align-items-center">
+					<div class="flex">
+						<h4 class="card-header__title">Courses</h4>
+					</div>
+				</div>
+				<div class="card-body">
+					<%= render 'organisation/courses/partials/listing', courses: @section.courses %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

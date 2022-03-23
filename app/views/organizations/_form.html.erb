@@ -1,0 +1,51 @@
+<div class="sign-up-wizard">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <div class="header mb-3">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="row">
+                  <div class="image-logo">
+                    <%= link_to root_path do %>
+                      <%= image_tag 'logos/dark-logo.png', id: '#' %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="row">
+                  <div class="heading">
+                    <h5>Create New Account</h5>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-4">
+                <div class="row">
+                  <div class="contact">
+                    <%= link_to 'About Us', about_us_pages_path %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-body wizard-content">
+            <%= form_with model: user, url: organizations_path, local: true, html: { id: 'signup-form', class: 'tab-wizard wizard-circle wizard clearfix' } do |form| %>
+
+              <%= render 'shared/errors', instance: user %>
+
+              <%= render 'profile_information',    f: form %>
+              <%= render 'business_information',   f: form %>
+              <%= render 'additional_information', f: form %>
+
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

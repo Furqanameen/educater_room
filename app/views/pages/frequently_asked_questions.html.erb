@@ -1,0 +1,234 @@
+<div class="aboutus-banner">
+	<%= image_tag 'page-header-about-us.jpg', class: 'img-fluid' %>
+	<div class="caption d-flex justify-content-center flex-column">
+		<div class="container-fluid page__container">
+			<ul class="list-unstyled p-0 mb-1">
+				<li class="d-inline-block"><%= link_to "Home", root_path, class: 'text-white' %></li>
+        <li class="d-inline-block mx-1 text-white">></li>
+        <li class="d-inline-block"><%= link_to "Services", '#', class: 'text-white' %></li>
+			</ul>
+			<h1 class="text-white mb-2">FAQs</h1>
+			<p class="text-white text-light">A hub for E-Learning Organizations!</p>
+		</div>
+	</div>
+</div>
+
+<div class="content-area my-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<aside class="side-links " id="sidebar">
+					<div class="theiaStickySidebar">
+						<div class="box_style_cat" id="faq_box">
+							<ul id="cat_nav">
+								<li>
+									<%= link_to '#general_info', class: 'active' do %>
+										<i class="fa fa-address-book book"></i>
+										General Information
+										<i class="fa fa-chevron-right arrow"></i>
+									<% end %>
+								</li>
+								<li>
+									<%= link_to '#updates', class: '' do %>
+										<i class="fa fa-address-book book"></i>
+										Updates & Enhancements
+										<i class="fa fa-chevron-right arrow"></i>
+									<% end %>
+								</li>
+								<li>
+									<%= link_to '#pricing', class: '' do %>
+										<i class="fa fa-address-book book"></i>
+										Pricing
+										<i class="fa fa-chevron-right arrow"></i>
+									<% end %>
+								</li>
+								<li>
+									<%= link_to '#technical', class: '' do %>
+										<i class="fa fa-address-book book"></i>
+										Technical Information
+										<i class="fa fa-chevron-right arrow"></i>
+									<% end %>
+								</li>
+								<li>
+									<%= link_to '#security', class: '' do %>
+										<i class="fa fa-address-book book"></i>
+										Security
+										<i class="fa fa-chevron-right arrow"></i>
+									<% end %>
+								</li>
+							</ul>
+						</div>
+						<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+							<div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+								<div style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 295px; height: 1365px;">
+								</div>
+							</div>
+							<div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+								<div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<div class="col-md-8 faq-section" id="faq">
+				<h4 class="mb-4">General Information</h4>
+				<div role="tablist" class="add_bottom_45 accordion_2" id="general_info">
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseOne_general_info', data: {toggle: 'collapse'}, aria: {expanded:'true'} do %>
+									<i class="indicator ti-minus"></i>Is Brighter's Room for Students?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseOne_general_info" class="collapse show" role="tabpanel" data-parent="#general_info">
+							<div class="card-body">
+								<p>No, Brighter's Room is for Organizations and Institutes that would like to create an e-learning platform. Brighter's Room provides ready-to-use e-learning platforms with all the necessary tools and features pre-built.</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseTwo_general_info', class: 'collapsed', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>Is Brighter's Room for Instructors?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseTwo_general_info" class="collapse" role="tabpanel" data-parent="#general_info">
+							<div class="card-body">
+								<p>No, Brighter's Room is for Organizations and Institutes that would like to create an e-learning platform. Brighter's Room provides ready-to-use e-learning platforms with all the necessary tools and features pre-built.</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseThree_general_info', class: 'collapsed', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>Is Brighter's Room for Organizations?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseThree_general_info" class="collapse" role="tabpanel" data-parent="#general_info">
+							<div class="card-body">
+								<p>Yes, Brighter's Room is for Organizations and Institutes that would like to create an e-learning platform. Brighter's Room provides ready-to-use e-learning platforms with all the necessary tools and features pre-built.</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseFour_general_info', class: 'collapsed', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>Is there a Brighter’s Room app for mobile devices?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseFour_general_info" class="collapse" role="tabpanel" data-parent="#general_info">
+							<div class="card-body">
+								<p>Not at the moment, but we are working on it and it will be available in the future. However, our current application is responsive and mobile-friendly. You will be able to use it on any device on all major browsers.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4 class="my-4">Updates & Enhancements</h4>
+				<div role="tablist" class="add_bottom_45 accordion_2" id="updates">
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseOne_updates', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>Can I request for more features?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseOne_updates" class="collapse" role="tabpanel" data-parent="#updates">
+							<div class="card-body">
+								<p>Yes, we are constantly adding more features to improve Brighter’s Room for our customers. We always welcome new and innovative ideas. Feel free to share your feedback with us.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4 class="my-4">Pricing</h4>
+				<div role="tablist" class="add_bottom_45 accordion_2" id="pricing">
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseOne_pricing', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>Is Brighter’s Room free to use?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseOne_pricing" class="collapse" role="tabpanel" data-parent="#pricing">
+							<div class="card-body">
+								<p>Organization owners can use some of the basic features free of cost. However, to use premium features, customers need to select a payment plan first. We have budget friendly plans for everyone.</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseTwo_pricing', class: 'collapsed', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>Do I need a membership to use Brighter’s Room?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseTwo_pricing" class="collapse" role="tabpanel" data-parent="#pricing">
+							<div class="card-body">
+								<p>Organization owners can use some of the basic features free of cost. However, to use premium features, customers need to select a general_info plan first. We have budget friendly plans for everyone.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4 class="my-4">Technical Information</h4>
+				<div role="tablist" class="add_bottom_45 accordion_2" id="technical">
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseOne_technical', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>Is there any special software required to use Brighter’s Room?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseOne_technical" class="collapse" role="tabpanel" data-parent="#technical">
+							<div class="card-body">
+								<p>No additional software is required to use Brighter’s Room. You simply need a reliable internet connection and a personal computer.</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseTwo_technical', class: 'collapsed', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>As an organization owner, do I get a dedicated URL to host my organization?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseTwo_technical" class="collapse" role="tabpanel" data-parent="#technical">
+							<div class="card-body">
+								<p>Yes. All our customers have to visit <%= link_to 'https://www.brightersroom.com/', '' %> to register their account. However, after signing up they are given a separate and dedicated URL where their clients can visit them.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4 class="my-4">Security</h4>
+				<div role="tablist" class="add_bottom_45 accordion_2" id="security">
+					<div class="card">
+						<div class="card-header" role="tab">
+							<h5 class="mb-0">
+								<%= link_to '#collapseOne_security', data: {toggle: 'collapse'}, aria: {expanded:'false'} do %>
+									<i class="indicator ti-plus"></i>How secure is the Brighters Room?
+								<% end %>
+							</h5>
+						</div>
+						<div id="collapseOne_security" class="collapse" role="tabpanel" data-parent="#security">
+							<div class="card-body">
+								<p>Brighter’s room is a safe, efficient and effective platform where organizations can manage their instructors and students.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render 'shared/public_partials/register' %>

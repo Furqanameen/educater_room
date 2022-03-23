@@ -1,0 +1,1 @@
+$("#lessons-card").html("<%= escape_javascript render(partial: 'instructor/lessons/partials/listing', locals: { course_section: @course_section, lessons: @lessons }) %>")

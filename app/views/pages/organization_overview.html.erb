@@ -1,0 +1,217 @@
+<div class="aboutus-banner">
+  <%= image_tag 'page-header-about-us.jpg', class: 'img-fluid' %>
+  <div class="caption d-flex justify-content-center flex-column">
+    <div class="container-fluid page__container">
+      <ul class="list-unstyled p-0 mb-1">
+        <li class="d-inline-block"><%= link_to "Home", root_path, class: 'text-white' %></li>
+        <li class="d-inline-block mx-1 text-white">></li>
+        <li class="d-inline-block"><%= link_to "Overview", '#', class: 'text-white' %></li>
+      </ul>
+      <h1 class="text-white mb-2">Organization Dashboard Overview</h1>
+      <p class="text-white text-light">A hub for E-Learning Organizations!</p>
+    </div>
+  </div>
+</div>
+
+<div class="four-section">
+  <div class="align-items-center order-change">
+    <h1 class="bold">Organization Complete Dashboard Overview</h1>
+    <h5>All the amazing features available on the organization dashboard!</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">On the dashboard screen, the organization owner can view various numbers
+          and statistics like the total number of students who have enrolled in different
+          courses in the present month, total instructors of the organization, and the
+          total earnings of the current month and year.</p>
+          <p class="text-justify">Here is the complete list of features that are available for the Organization.</p>
+          <ul align="left">
+            <li><strong>On-board Instructors</strong></li>
+            <li><strong>On-board Students</strong></li>
+            <li><strong>Offer Courses</strong></li>
+            <li><strong>Manage Payments</strong></li>
+            <li><strong>Schedule Events</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-dashboard.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/public_partials/register' %>
+
+<div class="four-section">
+  <div class="align-items-center">
+    <h3 class="bold">Instructors</h3>
+    <h5>Manage Instructor Profiles</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">The organization owners can view the list of all the instructors within the
+          organization and can also create, edit, and delete their profiles.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-instructor.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Students</h3>
+    <h5>Manage Student Profiles</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-student.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">A list of enrolled students is shown on this screen. The organization owners
+          can also edit these profiles and can add new ones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Batch</h3>
+    <h5>Manage Batches and Sessions</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">All the information related to the batches/sessions is displayed on this
+          screen. The organization owner can view the data and also can update it
+          easily.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-batches.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Courses</h3>
+    <h5>Manage Your Courses</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-courses.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">All the courses offered by the organization are listed on this screen and the
+          organization owners can edit these courses, add new ones, and can delete
+          old ones as well.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Billing</h3>
+    <h5>Track Financial Details of Your Organization</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">The organization owners can manage the financial details of their
+          organization. They can very easily track the wages of their staff while
+          managing the student fees as well.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-billing.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Payment History</h3>
+    <h5>Monitor Monthly Subscription Details</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-payments-history.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">This section will display the monthly subscription payment history between
+          Brighter’s Room and the Organization. All the relevant details will be
+          available to the organization owner which will ensure complete transparency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Pricing Plans</h3>
+    <h5>Choose Pricing Plans</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">This will show the pricing plan that the organization is subscribed to. The
+          other available pricing plans will also be displayed so that the organization
+          owner can upgrade or downgrade their plan based on their needs.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-pricing-plans.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Event Calendar</h3>
+    <h5>Create and Manage Events</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-events.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">The organization owner can mark various events like New Batch Enrollment,
+          Exam Week, etc. on a calendar. The event will be broadcasted and all the
+          users will receive a notification. The users will also be able to view the event
+          on their own calendars</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Newsletter</h3>
+    <h5>Send Memos to Staff & Students</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">The organization owner has the ability to send out memos to Instructors
+          and/or Students.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/organizer-newsletters.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

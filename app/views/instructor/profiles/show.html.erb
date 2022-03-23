@@ -1,0 +1,23 @@
+<div class="row justify-content-end">
+  <%= link_to 'Edit', edit_instructor_profile_path(current_user), class: 'btn btn-info pull-right'%>
+</div><br />
+<div class="bg-secondary text-white d-flex justify-content-center align-items-center p-4 mb-4" style="height:400px">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-lg-left">
+        <div class="mr-lg-4 mb-4 mb-lg-0">
+            <%= image_tag current_user.image_path, class: "rounded-circle", width: "200", alt: "Frontted" %>
+        </div>
+        <div>
+            <h1 class="mb-lg-4"><%= current_user.full_name %></h1>
+            <p class="mb-lg-4"><%= current_user.full_name %> works for frontted developing Bootstrap 4 Admin Templates.</p>
+            <%= link_to 'https://www.frontted.com', nil, class: "mr-3 text-white text-underline" %>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+
+</div>
+
+<h4 class="mb-4"><%= current_user.first_name%>'s Courses</h4>
+
+<div class="row">
+  <%= render 'instructor/profiles/partials/courses', course_sections: @course_sections %>
+</div>

@@ -1,0 +1,34 @@
+<div class="mdk-drawer js-mdk-drawer" id="default-drawer" data-align="end">
+  <div class="mdk-drawer__content">
+    <div class="sidebar sidebar-light sidebar-left bg-white" data-perfect-scrollbar>
+      <div class="sidebar-block p-0">
+        <ul class="sidebar-menu mt-0 py-3">
+          <li class="sidebar-menu-item py-2 px-3 border-bottom<%= " active" if params[:id] == "home" %>">
+            <i class="fas fa-home mr-1 d-inline-block"></i>
+            <%= link_to 'Home', root_path, class: 'd-inline-block' %>
+          </li>
+          <li class="sidebar-menu-item py-2 px-3 border-bottom">
+            <i class="fas fa-cogs mr-1 d-inline-block"></i>
+            <%= link_to 'Features', root_path(anchor: "features"), class: 'd-inline-block' %>
+          </li>
+          <li class="sidebar-menu-item py-2 px-3 border-bottom">
+            <i class="fas fa-user mr-1 d-inline-block"></i>
+            <%= link_to 'Users Overview', root_path(anchor: "users-overview"), class: 'd-inline-block' %>
+          </li>
+          <li class="sidebar-menu-item py-2 px-3 border-bottom">
+            <i class="fas fa-copy mr-1 d-inline-block"></i>
+            <%= link_to 'Register Now', root_path(anchor: "register-now"), class: 'd-inline-block' %>
+          </li>
+          <li class="sidebar-menu-item py-2 px-3 border-bottom">
+            <i class="fas fa-phone mr-1 d-inline-block"></i>
+            <%= link_to 'Contact Us', root_path(anchor: "contact-us"), class: 'd-inline-block' %>
+          </li>
+          <li class="sidebar-menu-item py-2 px-3<%= " active" if params[:id] == "about-us" %>">
+            <i class="fas fa-address-card mr-1 d-inline-block"></i>
+            <%= link_to 'About Us', about_us_pages_path, class: 'd-inline-block' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

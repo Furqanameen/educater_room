@@ -1,0 +1,13 @@
+<% quizzes.each.with_index(1) do |quiz, index| %>
+  <tr id="quiz-row-<%= quiz.id %>">
+    <td><%= quiz&.title %></td>
+    <td><%= quiz&.description %></td>
+    <td><%= humanize_time(quiz&.start_date) %></td>
+    <td><%= humanize_time(quiz&.end_date) %></td>
+    <td class="text-center">
+        <%= link_to 'Show', instructor_course_section_quiz_path(course_section.id, quiz), class: 'btn btn-success'%>
+        <%= link_to 'Edit', edit_instructor_course_section_quiz_path(course_section.id, quiz), class: 'btn btn-info'%>
+        <%= link_to 'Delete', instructor_course_section_quiz_path(course_section.id, quiz), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+<% end %>

@@ -1,0 +1,139 @@
+<div class="aboutus-banner">
+  <%= image_tag 'page-header-about-us.jpg', class: 'img-fluid' %>
+  <div class="caption d-flex justify-content-center flex-column">
+    <div class="container-fluid page__container">
+      <ul class="list-unstyled p-0 mb-1">
+        <li class="d-inline-block"><%= link_to "Home", root_path, class: 'text-white' %></li>
+        <li class="d-inline-block mx-1 text-white">></li>
+        <li class="d-inline-block"><%= link_to "Overview", '#', class: 'text-white' %></li>
+      </ul>
+      <h1 class="text-white mb-2">Student Dashboard Overview</h1>
+      <p class="text-white text-light">A hub for E-Learning Organizations!</p>
+    </div>
+  </div>
+</div>
+
+<div class="four-section">
+  <div class="align-items-center order-change">
+    <h1 class="bold">Student Complete Dashboard Overview</h1>
+    <h5>All the amazing features available on the student dashboard!</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">Students can review their recent activities from the dashboard. They can
+          also check their progress in each course and can also resume lessons in
+          current courses.</p>
+          <p class="text-justify">Here is the complete list of features that are available to the students.</p>
+          <ul align="left">
+            <li><strong>Join Courses</strong></li>
+            <li><strong>Track their progress for Courses</strong></li>
+            <li><strong>Take & complete Lessons</strong></li>
+            <li><strong>Take & submit Quizzes</strong></li>
+            <li><strong>Track Fees & Dues</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/student-dashboard.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/public_partials/register' %>
+
+<div class="four-section">
+  <div class="align-items-center">
+    <h3 class="bold">Series</h3>
+    <h5>Collection of Related Courses</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">All the courses with complete lessons are available in the series section.
+          Students are able to select any course and start learning.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/student-series.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Courses</h3>
+    <h5>All your Courses in one place</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/student-courses.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">Multiple courses are added in this section by the instructors of the respective
+          organization. The students can resume their classes as per their
+          convenience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Take Course</h3>
+    <h5>Resume Your Education Online</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">Students can start their training in each course and can also directly
+          communicate with their instructor if they need further assistance.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/student-take-courses.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Take Quizzes</h3>
+    <h5>Test Your Skills</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/student-take-quiz.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">Students can attempt quizzes created by the instructors. Brighter’s Room
+          provides a convenient way for instructors to conduct tests and grade them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Fee & Dues</h3>
+    <h5>Manage and track your online payments</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">Billing and payments is very convenient with Brighter’s Room. No need to
+          wait in long queues, students can simply pay for any course using our
+          reliable online payment system.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/student-fee-&-dues.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

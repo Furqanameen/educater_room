@@ -1,0 +1,33 @@
+<div class="container-fluid page__heading-container">
+  <div class="page__heading d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+    <h1 class="m-lg-0">Courses</h1>
+    <%= link_to 'New Course', new_organisation_course_path, class: 'btn btn-success ml-lg-2' %>
+  </div>
+</div>
+
+<div class="container-fluid page__container">
+  <div class="row courses">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-header-large bg-light d-flex align-items-center">
+          <div class="flex">
+            <h4 class="card-header__title">Courses</h4>
+          </div>
+          <% if @courses.present? %>
+            <div class="d-flex mb-2">
+              <div class="form-inline ml-auto">
+                <div class="form-group">
+                  <label class="form-label mr-1">Filter: </label>
+                  <%= select_tag 'course', options_for_select([['All', 'all'], ['Published', 'published'], ['Un-Published', 'un_published'], ['Deleted', 'deleted']]), { include_blank: 'Select Option', class: 'form-control course-search-filter select2', id: 'course-search-constraint' } %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="card-body" id="course-card">
+          <%= render 'organisation/courses/partials/listing', courses: @courses %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

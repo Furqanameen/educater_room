@@ -1,0 +1,142 @@
+<div class="aboutus-banner">
+  <%= image_tag 'page-header-about-us.jpg', class: 'img-fluid' %>
+  <div class="caption d-flex justify-content-center flex-column">
+    <div class="container-fluid page__container">
+      <ul class="list-unstyled p-0 mb-1">
+        <li class="d-inline-block"><%= link_to "Home", root_path, class: 'text-white' %></li>
+        <li class="d-inline-block mx-1 text-white">></li>
+        <li class="d-inline-block"><%= link_to "Overview", '#', class: 'text-white' %></li>
+      </ul>
+      <h1 class="text-white mb-2">Instructor Dashboard Overview</h1>
+      <p class="text-white text-light">A hub for E-Learning Organizations</p>
+    </div>
+  </div>
+</div>
+
+<div class="four-section">
+  <div class="align-items-center order-change">
+    <h1 class="bold">Instructor Complete Dashboard Overview</h1>
+    <h5>All the amazing features available on the instructor dashboard!</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">On their dashboard screen, instructors have access to all the courses they offer, the students enrolled and the amount of their overall earnings as well as the earnings for the current month. They are also
+          shown the number of students enrolled in the current month for each course
+          that they are offering.</p>
+          <p class="text-justify">Here is the complete list of features that are available to the Instructors.</p>
+          <ul align="left">
+            <li><strong>Manage Courses</strong></li>
+            <li><strong>Prepare Lessons</strong></li>
+            <li><strong>Create Quizzes</strong></li>
+            <li><strong>Monitor Salary</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/instructor-dashboard.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/public_partials/register' %>
+
+<div class="four-section">
+  <div class="align-items-center">
+    <h3 class="bold">My Courses</h3>
+    <h5>Add New Courses</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/instructor-my-courses.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">This section lists down all the courses that the respective instructor is
+          offering. The instructor can easily sort and filter the courses based on
+          various criteria.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Edit Courses</h3>
+    <h5>Manage Your Courses</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">The instructors have the ability to add course details like name and
+          description and they can upload a course title image as well. The instructors
+          can easily manage the lessons within each course.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/instructor-edit-course.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Edit Lessons</h3>
+    <h5>Manage Each Lesson</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/instructor-edit-lesson.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">The instructors have the ability to add lesson information like name and
+          description and they can upload lesson content like videos, supporting
+          documents as well.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center order-change">
+    <h3 class="bold">Create Quizzes</h3>
+    <h5>Create & Manage Quizzes</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-right" data-offset="-100">
+          <p class="text-justify">Creating and managing quizzes is really simple, thanks to our quiz
+          management system. Instructors can create various quizzes to test the
+          knowledge of the students.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/instructor-create-quizzes.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="align-items-center">
+    <h3 class="bold">Monitor Salary</h3>
+    <h5>Track your Earnings</h5>
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 p-0 box" style="min-height: 300px; position: relative; overflow: hidden;">
+        <div class="parallax">
+          <%= image_tag("overview-banners/instructor-monitor-salary.jpg") %>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 p-0">
+        <div class="p-3 px-5 h-100 aos-init aos-animate" data-aos="fade-left" data-offset="-100">
+          <p class="text-justify">All the financial information related to the courses is accessible to the
+          instructors. They can view the billing cycle and also their earning history
+          from their dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

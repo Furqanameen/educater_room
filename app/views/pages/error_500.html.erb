@@ -1,0 +1,32 @@
+<div class="error-pages">
+  <div class="box">
+    <div class="holder">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-8">
+            <div class="card">
+              <div class="card-header card-header-large bg-white">
+                <h4 class="card-header__title text-center">
+                  <div class="image-logo text-center">
+                    <%= link_to root_path do %>
+                      <%= image_tag 'logos/dark-logo.png' %>
+                    <% end %>
+                  </div>
+                </h4>
+              </div>
+              <div class="card-body text-center">
+                <div class="card-text">
+                  <h4>Error 500</h4>
+                  <p class="mb-2">Oops! Something went terribly wrong.</p>
+                  <p class="mb-2">An unexpected error seems to have occured.</p>
+                  <p>Why not try refreshing the page? Or you can simply contact us if the problem persists.</p>
+                  <%= link_to 'Back To Home', root_path, class: 'btn btn-sm btn-primary' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

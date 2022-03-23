@@ -1,0 +1,93 @@
+<div class="container-fluid page__heading-container">
+  <div class="page__heading d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+    <h1 class="m-0">Billing</h1>
+    <%= link_to 'New Student', '#', class: 'btn btn-success ml-lg-3' %>
+    <!-- <a class="btn btn-success ml-lg-3" href="#"></a> -->
+  </div>
+</div>
+
+<div class="container page__container">
+  <div class="row no-gutters">
+    <div class="col-md-12">
+      <div class="card card-form">
+        <div class="card-header card-header-large bg-light d-flex align-items-center">
+          <div class="flex">
+            <h4 class="card-header__title">Instrutor Salaries</h4>
+          </div>
+        </div>
+        <div class="card-body" id="student-card">
+          <table class="table mb-0 thead-border-top-0">
+            <thead>
+              <tr>
+                <th class="text-center">NAME</th>
+                <th class="text-center">NET PAY</th>
+                <th class="text-center">STATUS</th>
+                <th class="text-center" colspan="3">ACTION</th>
+              </tr>
+            </thead>
+            <tbody class="list" id="staff">
+              <tr class="text-center">
+                <td>Ahsan Fayyaz</td>
+                <td>$10,000</td>
+                <td>Paid</td>
+                <td>
+                  <%= link_to 'show', '#', class: 'btn btn-primary custom-size-btn' %> |
+                  <%= link_to 'edit', '#', class: 'btn btn-warning custom-size-btn' %> |
+                  <%= link_to 'destroy', '#', class: 'btn btn-danger custom-size-btn' %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer card-footer-large bg-light align-items-center py-4">
+          <ul class="pagination justify-content-center m-0">
+            <li class="page-item">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: 'Previous'} do %>
+                <span aria-hidden="true" class="material-icons">first_page</span>
+                <span class="sr-only">First</span>
+              <% end %>
+            </li>
+            <li class="page-item">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: 'Previous'} do %>
+                <span aria-hidden="true" class="material-icons">chevron_left</span>
+                <span class="sr-only">Prev</span>
+              <% end %>
+            </li>
+            <li class="page-item active">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: '1'} do %>
+                <span>1</span>
+              <% end %>
+            </li>
+            <li class="page-item">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: '2'} do %>
+                <span>2</span>
+              <% end %>
+            </li>
+            <li class="page-item">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: '3'} do %>
+                <span>3</span>
+              <% end %>
+            </li>
+            <li class="page-item">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: '4'} do %>
+                <span>4</span>
+              <% end %>
+            </li>
+            <li class="page-item">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: 'Next'} do %>
+                <span class="sr-only">Next</span>
+                <span aria-hidden="true" class="material-icons">chevron_right</span>
+              <% end %>
+            </li>
+            <li class="page-item">
+              <%= link_to '', id: '#', class: 'page-link', aria: {label: 'Next'} do %>
+                <span class="sr-only">Last</span>
+                <span aria-hidden="true" class="material-icons">last_page</span>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

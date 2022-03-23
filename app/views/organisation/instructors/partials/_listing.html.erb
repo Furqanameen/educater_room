@@ -1,0 +1,43 @@
+<% if instructors.present? %>
+  <table class="table mb-0 thead-border-top-0">
+    <thead>
+      <tr>
+        <th class="text-center">Sr</th>
+        <th class="text-center">IMAGE</th>
+        <th class="text-center">NAME</th>
+        <th class="text-center">CONTACT</th>
+        <th class="text-center">BIRTHDATE</th>
+        <th class="text-center">SPECIALIZATION</th>
+        <th class="text-center" colspan="3">ACTION</th>
+      </tr>
+    </thead>
+    <tbody class="list" id="staff">
+      <% instructors&.each_with_index do |instructor, index| %>
+      <tr class="text-center">
+        <td><%= (index+1) %></td>
+        <td>
+          <%= link_to organisation_instructor_path(instructor), class: 'avatar w-xs-plus-down-100' do %>
+            <%= image_tag(url_for(instructor.image_path), controls: true, class: 'avatar-course-img') %>
+          <% end %>
+        </td>
+
+        <td><%= instructor&.full_name&.titleize %></td>
+        <td><%= instructor&.contact %></td>
+        <td><%= instructor&.birth_date&.to_date %></td>
+        <td><%= instructor&.specialization %></td>
+        <td>
+        <% if instructor.deleted_at.blank? %>
+          <%= link_to 'show', organisation_instructor_path(instructor), class: 'btn btn-primary custom-size-btn' %>  |
+          <%= link_to 'edit', edit_organisation_instructor_path(instructor), class: 'btn btn-warning custom-size-btn' %> |
+          <%= link_to 'destroy', organisation_instructor_path(instructor), method: :delete, class: 'btn btn-danger custom-size-btn' %>
+        <%else %>
+          <%=link_to 'restore', restore_organisation_instructor_path(instructor), method: :delete, class: 'btn btn-warning custom-size-btn' %>
+         <%end%>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h3 class="not-found">NOT FOUND</h3>
+<% end %>

@@ -1,0 +1,26 @@
+<div class="page__header page__header-nav mb-0">
+  <div class="container-fluid page__container">
+    <div class="navbar navbar-secondary navbar-light navbar-expand-sm p-0 d-none d-md-flex" id="secondaryNavbar">
+      <ul class="nav navbar-nav m-auto">
+        <li class="nav-item<%= " active" if params[:id] == "home" %>">
+          <%= link_to 'Home', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Features', root_path(anchor: "features"), class: 'nav-link' %>
+        </li>
+        <li class="nav-item<%= " active" if params[:id] =~ /overview/i %>">
+          <%= link_to 'Users Overview', root_path(anchor: "users-overview"), class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Register Now', root_path(anchor: "register-now"), class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Contact Us', root_path(anchor: "contact-us"), class: 'nav-link' %>
+        </li>
+        <li class="nav-item<%= " active" if params[:id] == "about-us" %>">
+          <%= link_to 'About Us', about_us_pages_path, class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

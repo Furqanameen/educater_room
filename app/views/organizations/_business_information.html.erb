@@ -1,0 +1,31 @@
+<h6><span class="number mr-1">2</span> Tell us some more</h6>
+<section>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="block-head text-center mb-5">
+        <p class="mb-2">Step 2</p>
+        <h3>Business Information</h3>
+      </div>
+      <%= f.fields_for :organization do |organization_form| %>
+        <div class="row">
+          <div class="form-group col-sm-12">
+            <%= organization_form.label 'Organization Name' %>
+            <%= organization_form.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group col-sm-6">
+            <%= f.label :instructor_strength %>
+            <%= select_tag 'user[organization_attributes][additional_information][instructor_strength]', options_for_select(user_strength, params[:option] ), class: 'form-control' %>
+          </div>
+          <div class="form-group col-sm-6">
+            <%= f.label :student_strength %>
+            <%= select_tag 'user[organization_attributes][additional_information][student_strength]', options_for_select(user_strength, params[:option] ), class: 'form-control' %>
+          </div>
+          <div class="form-group col-sm-12">
+            <%= f.label :address %>
+            <%= f.text_field 'organization_attributes[additional_information][address]', class: 'form-control required' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

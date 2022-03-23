@@ -1,0 +1,5 @@
+<% if @next_question.present? %>
+  $('.render_question').html("<%= j(render(partial: 'student/quizzes/question', locals: { question: @next_question })) %>");
+  <% else %>
+  window.location.replace("<%= student_course_section_quizzes_path(@quiz.course_section) %>");
+<% end %>

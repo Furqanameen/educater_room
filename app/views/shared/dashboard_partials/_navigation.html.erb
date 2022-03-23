@@ -1,0 +1,51 @@
+<div class="page__header page__header-nav">
+  <div class="container-fluid page__container">
+    <div class="navbar navbar-secondary navbar-light navbar-expand-sm p-0 d-none d-md-flex" id="secondaryNavbar">
+      <ul class="nav navbar-nav">
+
+        <% if current_user.instructor? %>
+          <li class="nav-item">
+            <%= link_to 'Home', instructor_dashboard_index_path, id: 'fluid-index.html', class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Sections', instructor_course_sections_path, id: 'fluid-index.html', class: 'nav-link' %>
+          </li>
+          <li class="nav-item dropdown active">
+            <%= link_to 'Instructor', '#', class: 'nav-link dropdown-toggle', data: { toggle: 'dropdown' } %>
+            <div class="dropdown-menu">
+              <%= link_to 'Profile', instructor_profile_path(current_user), class: 'dropdown-item', id: 'fluid-instructor-profile.html' %>
+              <%= link_to 'Earnings', instructor_earnings_path, class: 'dropdown-item', id: 'fluid-instructor-earnings.html' %>
+              <%= link_to 'Payout', payout_instructor_earnings_path, class: 'dropdown-item', id: 'fluid-instructor-payout.html' %>
+            </div>
+          </li>
+        <% end %>
+
+        <% if current_user.student? %>
+          <li class="nav-item">
+            <%= link_to 'Home', '#', id: 'fluid-index.html', class: 'nav-link' %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= link_to 'Student', '#', class: 'nav-link dropdown-toggle', data: { toggle: 'dropdown' } %>
+            <div class="dropdown-menu">
+              <%= link_to 'Dashboard', '#', class: 'dropdown-item', id: 'fluid-student-dashboard.html' %>
+              <%= link_to 'Series', '#', class: 'dropdown-item', id: 'fluid-student-series.html' %>
+              <%= link_to 'Courses', '#', class: 'dropdown-item', id: 'fluid-student-courses.html' %>
+              <%= link_to 'Course Lessons', '#', class: 'dropdown-item', id: 'fluid-student-course.html' %>
+              <%= link_to 'Take Course', '#', class: 'dropdown-item', id: 'fluid-student-course.html' %>
+              <%= link_to 'Take Quiz', '#', class: 'dropdown-item', id: 'fluid-student-take-quiz.html' %>
+              <%= link_to 'Billing', '#', class: 'dropdown-item', id: 'fluid-student-billing.html' %>
+              <%= link_to 'Edit Account', '#', class: 'dropdown-item', id: 'fluid-student-edit-account.html' %>
+              <%= link_to 'Student Profile', '#', class: 'dropdown-item', id: 'fluid-student-profile.html' %>
+              <%= link_to 'Login', '#', class: 'dropdown-item', id: 'login.html' %>
+              <%= link_to 'Sign Up', '#', class: 'dropdown-item', id: 'sign-up.html' %>
+            </div>
+          </li>
+        <% end %>
+
+        <li class="nav-item">
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<% course_sections.each.with_index(1) do |course_section, index| %>
+  <div class="col-md-3">
+    <div class="card card__course">
+        <div class="card-header card-header-large card-header-dark bg-dark d-flex justify-content-center">
+            <%= link_to 'javascriptvoid(0)', class: "card-header__title  justify-content-center align-self-center d-flex flex-column" do %>
+                <span>
+                  <%= image_tag course_section&.course&.image, class: "mb-1", style: "width:34px;", alt: "logo" %>
+                </span>
+                <span class="course__title"><%= course_section&.course&.title%></span>
+                <span class="course__subtitle"><%=course_section&.course&.subtitle%></span>
+            <% end %>
+        </div>
+        <div class="p-3">
+            <div class="mb-2">
+                <span class="mr-2">
+                    <%= link_to 'javascriptvoid(0)', class: 'rating-link active' do %>
+                      <i class="material-icons icon-16pt">star</i>
+                    <% end %>
+                    <%= link_to 'javascriptvoid(0)', class: 'rating-link active' do %>
+                      <i class="material-icons icon-16pt">star</i>
+                    <% end %>
+                    <%= link_to 'javascriptvoid(0)', class: 'rating-link active' do %>
+                      <i class="material-icons icon-16pt">star</i>
+                    <% end %>
+                    <%= link_to 'javascriptvoid(0)', class: 'rating-link active' do %>
+                      <i class="material-icons icon-16pt">star</i>
+                    <% end %>
+                    <%= link_to 'javascriptvoid(0)', class: 'rating-link active' do %>
+                      <i class="material-icons icon-16pt">star_half</i>
+                    <% end %>
+                </span>
+                <strong>4.7</strong><br />
+                <small class="text-muted">(391 ratings)</small>
+            </div>
+            <div class="d-flex align-items-center">
+                <strong class="h4 m-0">$49</strong>
+                <%= link_to 'javascriptvoid(0)', class: "btn btn-primary ml-auto" do %>
+                  <i class="material-icons">add_shopping_cart</i>
+                <% end %>
+            </div>
+        </div>
+    </div>
+  </div>
+<% end %>

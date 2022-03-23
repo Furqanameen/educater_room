@@ -1,0 +1,52 @@
+<% if course_sections.present? %>
+  <% course_sections.each do |course_section| %>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-column flex-sm-row">
+            <%= link_to 'javascript:void(0)' , class: 'avatar w-xs-plus-down-100' do %>
+              <%= image_tag course_section.course.image, alt: 'Card image cap', class: 'avatar-course-img' %>
+            <% end %>
+            <div class="flex" style="min-width: 200px;">
+              <div class="d-flex">
+                <div>
+                  <h4 class="card-title mb-1">
+                    <%= "Section: #{course_section.section.title} (#{course_section.course.title})" %>
+                  </h4>
+                  <p>
+                    <%= "Batch: #{course_section.section.batch.title}" %>
+                  </p>
+                  <p class="text-muted"><%= course_section.section.description %></p>
+                </div>
+                <div class="dropdown ml-auto">
+                  <%= link_to 'javascript:void(0)' , class: 'dropdown-toggle text-muted', data: { toggle: 'dropdown', caret: 'false' } do %>
+                    <i class="material-icons">more_vert</i>
+                  <% end %>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <%= link_to 'Lessons', instructor_course_section_lessons_path(course_section.id), class: 'dropdown-item' %>
+                    <%= link_to 'Quizzes', instructor_course_section_quizzes_path(course_section.id), class: 'dropdown-item' %>
+                    <%= link_to 'Assignments', instructor_course_section_assignments_path(course_section.id), class: 'dropdown-item' %>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-end">
+                <div class="d-flex flex flex-column mr-3">
+                  <div class="d-flex align-items-center py-2 border-bottom">
+                    <span class="mr-2">&dollar;1,230/mo</span>
+                    <small class="text-muted ml-auto">34 SALES</small>
+                  </div>
+                  <div class="d-flex align-items-center py-2">
+                    <span class="badge badge-vuejs mr-2">VUEJS</span>
+                    <span class="badge badge-soft-secondary">INTERMEDIATE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <h3 class="not-found">NOT FOUND</h3>
+<% end %>

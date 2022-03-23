@@ -1,0 +1,18 @@
+.sidebar-menu-item.active:after {
+  right: 0 !important;
+}
+
+.sidebar-left {
+  ul {
+    li {
+      a {
+        color: #353535;
+      }
+
+      i {
+        width: 25px;
+        color: #353535;
+      }
+    }
+  }
+}

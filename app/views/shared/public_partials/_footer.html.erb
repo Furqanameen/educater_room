@@ -1,0 +1,67 @@
+<div class="bg-dark text-white" id="footer">
+  <div class="container-fluid page__container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= link_to '', class: 'flex d-flex align-items-center text-underline-0' do %>
+          <%= image_tag 'logos/logo.png', class: 'img-fluid', width: '180' %>
+        <% end %>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <h5>Company</h5>
+            <ul class="list-group list-group-flush mb-3">
+              <li class="">
+                <%= link_to 'Organization Overview', organization_overview_pages_path %>
+              </li>
+              <li class="">
+                <%= link_to 'Instructor Overview', instructor_overview_pages_path %>
+              </li>
+              <li class="">
+                <%= link_to 'Student Overview', student_overview_pages_path %>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <h5>Account</h5>
+            <ul class="list-group list-group-flush mb-3">
+              <li class="">
+                <a href="#">Login</a>
+              </li>
+              <li class="">
+                <%= link_to 'Sign Up', new_organization_path %>
+              </li>
+              <li class="">
+                <%= link_to 'Terms & Conditions', terms_and_conditions_pages_path %>
+              </li>
+              <li class="">
+                <%= link_to 'FAQs', frequently_asked_questions_pages_path %>
+              </li>
+              <li class="">
+                <%= link_to 'Privacy Policy', privacy_and_policy_pages_path %>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <h5>Stay in Touch</h5>
+            <ul class="list-group list-group-flush mb-3">
+              <li class="">
+                <%= link_to 'Contact Us', root_path(anchor: "contact-us") %>
+              </li>
+              <li class="">
+                <%= link_to 'About Us', about_us_pages_path %>
+              </li>
+            </ul>
+
+            <div class="d-flex ">
+              <a href="" class="btn btn-facebook btn-rounded-social d-flex align-items-center justify-content-center mr-2"><i class="fab fa-facebook"></i></a>
+              <a href="" class="btn btn-twitter btn-rounded-social d-flex align-items-center justify-content-center mr-2"><i class="fab fa-twitter"></i></a>
+              <a href="" class="btn btn-secondary btn-rounded-social d-flex align-items-center justify-content-center mr-2"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

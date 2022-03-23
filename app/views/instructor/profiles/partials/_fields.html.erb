@@ -1,0 +1,52 @@
+<div class="form-group">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, class: 'form-control', placeholder: 'Enter First Name', required: true, data: {'parsley-required-message': 'Please enter First name'} %>
+</div>
+<div class="form-group">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, class: 'form-control', placeholder: 'Enter Last Name', required: true, data: {'parsley-required-message': 'Please enter Last name'} %>
+</div>
+<div class="form-group">
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control', placeholder: 'Enter Email', required: true, data: { 'parsley-required-message': 'Please enter valid Email', 'parsley-type': 'email'} %>
+</div>
+<div class="form-group">
+  <%= f.label :contact %>
+  <%= f.text_field :contact, class: 'form-control', placeholder: 'Please Enter Contact', required: true, data: { 'parsley-required-message': 'Please enter valid Contact No', 'parsley-minlength': 11, 'parsley-type': 'integer'} %>
+</div>
+<div class="form-group">
+  <%= f.label :birth_date %>
+  <%= f.date_field :birth_date, class: 'form-control flat-date', placeholder: 'Select Date', required: true %>
+</div>
+<div class="form-group">
+  <%= f.label :specialization %>
+  <%= f.text_field :specialization, class: 'form-control', placeholder: 'Specialization', required: true, data: {  'parsley-required-message': 'Please enter user Specialization' } %>
+</div>
+<div class="form-group">
+  <%= f.label :current_password %>
+  <%= f.password_field :current_password, placeholder: "Please enter your current password", class: "form-control", required: true, data: { 'parsley-required-message': 'Current password is required' } %>
+</div>
+<br>
+<p class="password-change-field">Leave these fields blank if you don't want to change your password.</p>
+<div class="form-group">
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "Please enter your password", class: "form-control" , data: {'parsley-minlength': 6} %>
+</div>
+<div class="form-group">
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, placeholder: "Please enter your password confirmation", class: "form-control", data: { 'parsley-equalto': "#user_password", 'parsley-equalto-message': "Must must be same with new Password" }%>
+</div>
+
+<div class="form-group">
+  <label>Instructor Preview</label>
+  <div class="dz-clickable media align-items-center" data-toggle="dropzone" data-dropzone-url="http://" data-dropzone-clickable=".dz-clickable" data-dropzone-files="[&quot;assets/images/account-add-photo.svg&quot;]">
+    <div class="dz-preview dz-file-preview dz-clickable mr-3">
+      <div class="avatar avatar-lg dz-error dz-complete">
+        <%= image_tag url_for(f.object.image_path),  class: 'avatar-img rounded', data: { 'dz-thumbnail' => '' } %>
+      </div>
+    </div>
+    <div class="media-body">
+      <%= f.file_field :image, class: 'btn btn-sm dz-clickable' %>
+    </div>
+  </div>
+</div>

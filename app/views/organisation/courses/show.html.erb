@@ -1,0 +1,53 @@
+<div class="container page__heading-container">
+  <div class="page__heading d-flex align-items-center justify-content-between">
+    <h1 class="m-0">Show page of Course</h1>
+  </div>
+</div>
+
+<div class="container page__container show-details">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card__course">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-header card-header-large card-header-dark bg-dark d-flex justify-content-center">
+              <span class="card-header__title  justify-content-center align-self-center d-flex flex-column">
+                <%= image_tag url_for(@course.image_path), alt: 'logo' %>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="py-3 pr-3">
+              <div class="mb-2">
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="title">Title</span>
+                    <h5 class="mb-3"><%= @course.title&.titleize %></h5>
+                  </div>
+                  <div class="col-md-6">
+                    <span class="title">Sub-Title</span>
+                    <h5 class="mb-3"><%= @course.subtitle&.titleize %></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="title">Description</span>
+                    <p class="text-capitalize"><%= @course.description %></p>
+                  </div>
+                  <div class="col-md-6">
+                    <span class="title">Status</span>
+                    <p class="text-capitalize"><%= @course.status&.titleize %></p>
+                  </div>
+                </div>
+              </div>
+              <div class="text-right">
+                <%= link_to 'Edit', edit_organisation_course_path(@course), class: 'btn btn-warning mx-1 custom-size-btn' %>
+                <%= link_to 'Back', organisation_courses_path, class: 'btn btn-dark ml-1 custom-size-btn' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

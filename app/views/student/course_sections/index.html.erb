@@ -1,0 +1,22 @@
+<div class="block-content">
+  <table class="table table-striped admin-table">
+    <thead>
+      <tr>
+        <th>Section</th>
+        <th>Course</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @course_sections.each_with_index do |course_section, index|%>
+        <tr >
+          <td><%= course_section&.section&.title&.humanize %></td>
+          <td><%= course_section&.course&.title&.humanize %></td>
+          <td class="text-center">
+            <%= link_to 'Show Quizzes',student_course_section_quizzes_path(course_section), class: 'btn btn-success'%>
+          </td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,48 @@
+<h6><span class="number mr-1">3</span> What will you offer?</h6>
+<section>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="block-head text-center mb-5">
+        <p class="mb-2">Step 3</p>
+        <h3>Additional Information</h3>
+      </div>
+      <div class="row">
+        <label class="col-sm-12 mb-4">This is the question that is being asked to the user?</label>
+        <div class="form-group col-sm-6 required">
+          <span class="mb-3 d-block">What level of education do you provide?</span>
+          <div class="custom-control custom-checkbox">
+            <%= check_box_tag 'user[organization_attributes][additional_information][education][]', 'css', false, class: 'custom-control-input js-check-selected-row', id: 'customCheck1_1'  %>
+            <label class="custom-control-label" for="customCheck1_1"><span>CSS</span></label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <%= check_box_tag 'user[organization_attributes][additional_information][education][]', 'ee', false, class: 'custom-control-input js-check-selected-row', id: 'customCheck1_2'  %>
+            <label class="custom-control-label" for="customCheck1_2"><span>EE</span></label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <%= check_box_tag 'user[organization_attributes][additional_information][education][]', 'bba', false, class: 'custom-control-input js-check-selected-row', id: 'customCheck1_3'  %>
+            <label class="custom-control-label" for="customCheck1_3"><span>BBA</span></label>
+          </div>
+        </div>
+        <div class="form-group col-sm-6 required">
+          <span class="mb-3 d-block">What specialization do you provide?</span>
+          <div class="custom-control custom-checkbox">
+            <%= check_box_tag 'user[organization_attributes][additional_information][specialization][]', 'pre_school', false, class: 'custom-control-input js-check-selected-row', id: 'customCheck1_4'  %>
+            <label class="custom-control-label" for="customCheck1_4"><span>PreSchool</span></label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <%= check_box_tag 'user[organization_attributes][additional_information][specialization][]', 'intermediate', false, class: 'custom-control-input js-check-selected-row', id: 'customCheck1_5'  %>
+            <label class="custom-control-label" for="customCheck1_5"><span>Intermediate</span></label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <%= check_box_tag 'user[organization_attributes][additional_information][specialization][]', 'undergraduate', false, class: 'custom-control-input js-check-selected-row', id: 'customCheck1_6'  %>
+            <label class="custom-control-label" for="customCheck1_6"><span>Undergraduate</span></label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <%= check_box_tag 'user[organization_attributes][additional_information][specialization][]', 'postgraduate', false, class: 'custom-control-input js-check-selected-row', id: 'customCheck1_7'  %>
+            <label class="custom-control-label" for="customCheck1_7"><span>Postgraduate</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

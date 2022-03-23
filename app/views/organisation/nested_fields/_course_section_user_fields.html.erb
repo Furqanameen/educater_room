@@ -1,0 +1,6 @@
+<div class="nested-fields">
+  <div class="form-group">
+    <%= f.label :user_id, "Instructor" %>
+    <%= f.select :user_id, @instructors.map { |instructor| [instructor.email, instructor.id] }, { include_blank: 'Please select instructor', selected: f.object.user_id }, class: 'form-control select2 input-lg', required: true %>
+  </div>
+</div>

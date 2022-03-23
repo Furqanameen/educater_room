@@ -1,0 +1,63 @@
+<div class="container page__heading-container">
+  <div class="page__heading d-flex align-items-center justify-content-between">
+    <h1 class="m-0">Show page of Instructor</h1>
+  </div>
+</div>
+
+<div class="container page__container show-details">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card__course">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-header card-header-large card-header-dark bg-dark d-flex justify-content-center">
+              <span class="card-header__title  justify-content-center align-self-center d-flex flex-column">
+                <%= image_tag url_for(@instructor.image_path), alt: 'logo' %>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="py-3 pr-3">
+              <div class="mb-2">
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="title">Name</span>
+                    <h5 class="mb-3"><%= @instructor&.full_name&.titleize %></h5>
+                  </div>
+                  <div class="col-md-6">
+                    <span class="title">Email</span>
+                    <h5 class="mb-3"><%= @instructor&.email %></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <span class="title">Specialization</span>
+                    <p class="text-capitalize"><%= @instructor&.specialization %></p>
+                  </div>
+                  <div class="col-md-6">
+                    <span class="title">BirthDate</span>
+                    <p class="text-capitalize"><%= @instructor&.birth_date&.to_date %></p>
+                  </div>
+                </div>
+              </div>
+              <div class="btns text-right">
+                <%= link_to 'Edit', edit_organisation_instructor_path(@instructor), class: 'btn btn-warning ml-lg-2 custom-size-btn' %>
+                <%= link_to 'Back', organisation_instructors_path, class: 'btn btn-dark ml-lg-2 custom-size-btn' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header card-header-large bg-light d-flex align-items-center">
+          <div class="flex">
+            <h4 class="card-header__title">Courses</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <%= render 'organisation/courses/partials/listing', courses: @instructor.course_sections.map(&:course) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

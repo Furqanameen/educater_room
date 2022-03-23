@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="error"></div>
+    <div class="card">
+      <div class="card-header">
+        <div class="media align-items-center">
+          <div class="media-left">
+            <h4 class="m-0 text-primary mr-2"><strong>#<%= @index %></strong></h4>
+          </div>
+          <div class="media-body">
+            <h4 class="card-title m-0">
+              <%= question.statement %>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <%= form_tag student_submit_answer_path, remote: true do |f| %>
+        <div class="card-body">
+          <%= hidden_field_tag :question, question.id%>
+          <%= hidden_field_tag :count, @index%>
+          <% question.answers.each_with_index do |answer, index|%>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <%= check_box_tag "answers[]", answer.id, false, class: "custom-control-input", id: "customCheck#{answer.id}" %>
+                <%= label_tag "customCheck#{answer.id}", answer.statement, class: "custom-control-label" %>
+              </div>
+            </div>
+          <% end %>
+          <div class="card-footer">
+          <%=  link_to 'Skip', student_skip_question_path(question: question.id, count: @index), class: 'btn btn-light', remote: true %>
+          <%= button_tag(type: 'submit', id: '#', class: 'btn btn-success float-right') do %>
+            Submit
+            <i class="material-icons btn__icon--right">arrow_forward</i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>

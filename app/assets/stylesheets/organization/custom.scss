@@ -1,0 +1,112 @@
+.min-ht-200 {
+  min-height: 300px;
+}
+
+.selected-card {
+  background-color: $light-grey !important;
+
+  .plans {
+    h5 {
+      padding: 7px 0;
+    }
+  }
+}
+
+.plans {
+  strong {
+    color: $primary;
+    font-size: 25px;
+  }
+
+  h5 {
+    padding: 7px 0;
+    color: $footer-black;
+  }
+}
+
+.plans#course_content {
+  ul {
+    li {
+      display: block !important;
+
+      &:before {
+        vertical-align: sub;
+      }
+    }
+  }
+}
+
+.courses {
+  .dropdown-toggle {
+    &:after {
+      display: none;
+    }
+  }
+
+  .not-found {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin: 100px 0 150px;
+  }
+}
+
+.show-details {
+  .card__course {
+    .card-header {
+      height: 205px;
+
+      img {
+        width: 75%;
+      }
+    }
+
+    .title {
+      color: $dark-grey;
+      font-size: 14px;
+    }
+  }
+}
+
+.show-page {
+  .dropdown-toggle {
+    &:after {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.custom-size-btn {
+  width: 90px;
+}
+
+table {
+  tbody {
+    tr {
+      td {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.avatar-img {
+  height: auto !important;
+}
+
+.avatar {
+  height: auto !important;
+}
+
+.avatar-lg {
+  width: 5rem !important;
+}
+
+.ps__rail-y {
+  right: 0;
+}
+.select2-selection{
+  width: 425px;
+}
